@@ -1,0 +1,27 @@
+<html>
+	<meta charset="UTF-8">
+
+	<script>
+
+	    function pulaLinha() {
+	        document.write("<br>");
+	    }
+
+	    function mostra(frase) {
+
+	        document.write(frase);
+	        pulaLinha();
+	    }
+
+	    var multiplicador = 1;
+	    var numeroTabuada = parseInt(prompt("A tabuada de qual número que deseja saber?"));
+
+	    while(multiplicador <= 10) {
+
+	        mostra(numeroTabuada + " x " + multiplicador + " = " + (numeroTabuada * multiplicador));
+	        multiplicador = multiplicador + 1;
+	    }
+
+	</script>
+
+</html>
