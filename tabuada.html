@@ -1,27 +1,45 @@
 <html>
 	<meta charset="UTF-8">
 
-	<script>
+	<h1 align="center">Calculadora de Tabuada</h1>
+	<h4 align="center"> Descubra a tabuada do 1 até o 10!</h4>
+
+	<input type="textfield" name="input">
+	<input type="button" name = "button" value= "Calcular..."><br><br>
+
+	<script>	
+
+		var multiplicador = 1;
+	   	var numeroTabuada = document.querySelector("[name=input]");
 
 	    function pulaLinha() {
 	        document.write("<br>");
 	    }
 
-	    function mostra(frase) {
-
+	    function print(frase) {
 	        document.write(frase);
 	        pulaLinha();
 	    }
 
-	    var multiplicador = 1;
-	    var numeroTabuada = parseInt(prompt("A tabuada de qual número que deseja saber?"));
+	    function multiplica(){	    	
+	    
+	    	if (numeroTabuada.value > 0 && numeroTabuada.value <= 10){
+	    		
+	    		while(multiplicador <= 10) {
+	        	print(numeroTabuada.value + " x " + multiplicador + "  =  " + (numeroTabuada.value * multiplicador));
+	        	multiplicador = multiplicador + 1;	    		
+	    		}
+	    	}
 
-	    while(multiplicador <= 10) {
+	    	else {
+	    		alert("Número deve ser entre 1 e 10");
+	    	}   
 
-	        mostra(numeroTabuada + " x " + multiplicador + " = " + (numeroTabuada * multiplicador));
-	        multiplicador = multiplicador + 1;
-	    }
+		}		
 
+		var button = document.querySelector("[name=button]");
+		button.onclick = multiplica;
+	    	
 	</script>
 
 </html>
